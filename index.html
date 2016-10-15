@@ -1,64 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Public Archaeology : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Public archaeology</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-
-          <h1 id="project_title">Public Archaeology: Visualisation</h1>
-          <h2 id="project_tagline">A brief introduction to visualising Public Archaeology</h2>
-<img src="images/Ocean.jpg" alt="ocean" align="center" style="width:304px;height:228px;">
-       
-      </header>
-    </div>
-    
-    
-    
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visualisation</h3>
-
-<p>When considering Public Archaeology, and how increasingly digital it is becoming, visualisation is starting to play a key role in how research and data are understood and presented. Just as Public Archaeology takes a variety of forms for various purposes, there are also many ways in which visualisation can be implemented and incorporated into a new or existing project.</p>
-
-<p>As an example of how visualisation can be applied to an existing project, the infographic below takes the information from the main page of "Public Archaeology" and presents it in a new way that incorporates more images, icons, and designs that may present the information in a more appealing, eye-catching, and streamlined way.
-        
-  
-  <img src="images/Infographic2.png">
-  
-  <p>So with essentially the same information, this quick guide presents the text in a much more visually appealing and engaging way through the infographic format.
-
-    <p>Another example of using visualisation to take existing information and apply it in a new way is compiling data and presenting it in a way that can be read and understood quickly. Voyant, for instance, allows users to create images that take the most commonly occuring words in documents, websites, and so forth, and present the words in a visually appealing and easy-to-understand way.
-      
-      This image, for example, takes the top occuring words from the Public Archaeology site and the four webpages for the sites in Victoria (listed above and on the last page):</p>
-      
-      
-        <p> <img src="images/Voyant.png"> </p>
-      
-      
-      <p> While this image is a fairly basic layout in Voyant, in nonetheless represents how visualisation can be used to take a lot of information and present it in a more comprehensible manner. Additionally, when looking at the image, one can note which words appear the most in across the various pages, and thus draw some conclusions regarding the themes and ideas that make-up much of Public Archaeology.</p>
-        
-        <p>Just as visualisation tools can be used to take pre-existing information and present it in an interesting way, 
-        
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <!--Script Reference[1]-->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+<body>
+  <!--Chart Placement[2]-->
+  <div id="chartDiv"></div>
+  <script>
+    var chartData = {
+      type: "bar",  // Specify your chart type here.
+      title: {
+        text: "My First Chart" // Adds a title to your chart
+      },
+      legend: {}, // Creates an interactive legend
+      series: [  // Insert your series data here.
+          { values: [35, 42, 67, 89]},
+          { values: [28, 40, 39, 36]}
+      ]
+    };
+    zingchart.render({ // Render Method[3]
+      id: "chartDiv",
+      data: chartData,
+      height: 400,
+      width: 600
+    });
+  </script>
+</body>
+</html>
